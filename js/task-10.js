@@ -8,10 +8,10 @@ let boxes = document.querySelector("#boxes");
 
 buttonCreate.addEventListener("click", createBoxes);
 
-function createBoxes(amount) {
-  for (let i = 0, quantity = 30; i < amount; i += 1, quantity += 10) {
+function createBoxes(numb) {
+  for (let i = 0, size = 30; i < numb; i += 1, size += 10) {
     let color = getRandomHexColor();
-    let box = `<div style ="width: ${quantity}px; hight: ${quantity}px; background-color: ${color};"> </div>`;
+    let box = `<div style ="width: ${numb}px; hight: ${numb}px; background-color: ${color};"> </div>`;
     return box;
   }
   elements.conteiner.append(...box);
