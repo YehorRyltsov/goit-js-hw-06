@@ -7,17 +7,17 @@ let index = [0, 1];
 let boxes = document.querySelector("#boxes");
 
 let numb = document.querySelector("input");
-
-index.map((b) => {
-  buttons[b].addEventListener("click", (event) => {
+buttons.forEach((button) =>
+  button.addEventListener("click", (event) => {
     let action = event.target.hasAttribute("data-create");
     if (action) {
       createBoxes();
     } else {
       deleteBoxes();
     }
-  });
-});
+  })
+);
+
 function createBoxes() {
   if (numb.value === "") {
     return;
