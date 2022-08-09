@@ -1,12 +1,12 @@
 function getRandomHexColor() {
   return `#${Math.floor(Math.random() * 16777215).toString(16)}`;
 }
-const elements = {
-  buttonCreate: document.querySelector('button["data - create"]'),
-  buttonDestroy: document.querySelector('button["data-destroy"]'),
-  boxes: document.querySelector("#boxes"),
-};
-elements.buttonCreate.addEventListener("click", createBoxes);
+
+let buttonCreate = document.querySelector(".data-create");
+let buttonDestroy = document.querySelector(".data-destroy");
+let boxes = document.querySelector("#boxes");
+
+buttonCreate.addEventListener("click", createBoxes);
 
 function createBoxes(amount) {
   for (let i = 0, quantity = 30; i < amount; i += 1, quantity += 10) {
