@@ -8,6 +8,7 @@ colorValue.textContent = "#ffffff";
 changeColorButton.addEventListener("click", onChangeColorButton);
 function onChangeColorButton(event) {
   event.preventDefault();
-  bodyEl.style.backgroundColor = getRandomHexColor();
-  colorValue.innerHTML = bodyEl.style.backgroundColor;
+  let hex = getRandomHexColor();
+  bodyEl.style.backgroundColor = hex;
+  colorValue.innerHTML = hex;
 }
